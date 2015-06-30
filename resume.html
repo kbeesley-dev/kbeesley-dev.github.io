@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Kevin Beesley</title>
+    
+    <style type="text/css">
+    
+            body {
+            font-family:tahoma;
+            margin:0;
+            padding:0;
+            color:#333;
+        }
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .group {
+            display:inline-block;
+            margin:0em;
+            padding:0em;
+        }
+        header {
+            white-space: nowrap;
+            background-color:#f3f3f3;
+        }
+        header:after {
+            clear:both;
+        }
+        
+        header h1 {
+            display:block;
+            width:5em;
+            margin:0;
+            padding:0.25em 0em;
+            padding-left:0.15em;
+            white-space: normal;
+            float:left;
+            font-size:38pt;
+            background-color:#d3d3d3;
+        }
+        header .contact {
+            display:inline-block;
+            margin:0;
+            margin-right:2em;
+            padding:0;
+            white-space: normal;
+            float:right;
+            font-size:10pt;
+            font-weight:normal;
+            text-align:left;
+            padding:0.25em;
+        }
+        header .contact > span {
+            display:block;
+        }
+        header .contact > span label {
+            display:inline-block;
+            font-weight:bold;
+            font-size:8pt;
+            width:3em;
+            text-align: right;
+            margin-right:0.5em
+        }
+        header .contact span {
+            vertical-align: top;
+        }
+        header .contact span.phone a {
+            text-decoration:none;
+            color:inherit;
+        }
+        header .contact span.address {
+            display:block;
+        }
+        header .contact span.address .group {
+            margin-left:-0.25em;
+        }
+        header .contact span.address .group span {
+            display:block;
+            vertical-align: top;
+        }
+        header aside {
+            display:block;
+            width:48%;
+            white-space: normal;
+            float:right;
+            clear:right;
+            text-align: right;
+        }
+        header aside > * {
+            display:inline-block;
+            vertical-align: bottom;
+        }
+        header aside .prefix {
+            font-weight:bold;
+            font-style:italic
+        }
+        header aside .curl {
+            font-size:40pt;
+            color:#000;
+        }
+        header aside .vertigroup {
+        }
+        header aside .vertigroup span {
+            display:block;
+            font-size:10pt;
+        }
+        
+        .contentbody {
+            clear:both;
+            padding-top:0.75em;
+            white-space: nowrap;
+        }
+        .contentbody .main {
+            vertical-align: top;
+            white-space: normal;
+        }
+        ul.col1, ul.col2 {
+                display:inline-block;
+                vertical-align: top;
+        }
+        
+        
+        .contentbody .main section {
+            margin:1em;
+            margin-bottom:2em;
+        }
+        .contentbody .main section h3 {
+            background-color:#333;
+            padding:0.75em 1em;
+            margin:0em;
+            margin-bottom:0.5em;
+            color:#e3e3e3;
+            display:inline-block;
+        }
+        .contentbody .main section .sectionContent {
+            font-size:10pt;
+            margin-left:1.5em;
+        }
+        .contentbody .main section .sectionContent .row {
+            margin-bottom:1em;
+        }
+        .contentbody .main section .sectionContent .row h4 {
+            font-size:12pt;
+            margin-top:2em;
+            border-top:1px solid #e3e3e3;
+        }
+        .contentbody .main section .sectionContent .row:first-child h4 {
+            margin-top:0.75em;
+            border-top:0px solid #e3e3e3;
+        }
+        .contentbody .main section .sectionContent .row h4 em {
+            display:block;
+            font-size:8pt;
+            text-align:right;
+        }
+        
+        .contentbody .main section .sectionContent .row .tie-in {
+            margin-left:1.5em
+        }
+        .contentbody .main section .sectionContent .row .item {
+            margin-left:1.5em;
+        }
+        .contentbody .main section .sectionContent .row .item .itemLead {
+            margin-right:1em;
+            display:inline-block;
+        }
+        .contentbody .main section .sectionContent .row .item .itemContent {
+            display:inline-block;
+        }
+        
+        .contentbody .main section .sectionContent .row .item.technologies {
+            margin:0em 2.5em;
+            border:1px solid #ccc;
+            background:#f3f3f3;
+            padding:1em;
+            border-radius:5px;
+            display:block;
+        }
+        .contentbody .main section .sectionContent .row .item.technologies .itemContent {
+            font-size:10pt;
+            display:block;
+        }
+
+        footer {
+        }
+
+
+
+
+
+        @media only print {
+            header .contact span.email a {
+                text-decoration:none;
+                color:inherit;
+            }
+        }
+        @media only screen and (max-width:550px) {
+            header {
+                overflow: hidden;
+            }
+            header h1, header .contact, header aside {
+                display:block;
+                width:100%;
+                float:none;
+            }
+            .contentbody .main section
+            {
+            }
+            .contentbody .main section {
+                margin:1.5em 0.15em;
+                margin-bottom:1.5em;
+                margin:1.5em 0.5em 1.5em 0em
+            }
+            .contentbody .main section h3 {
+                display:block;
+            }
+            
+        }
+    
+    </style>
+    
+</head>
+<body>
+
+    <header class="clearfix">
+        <h1>Kevin Beesley</h1>
+        <h2 class="contact">
+            <span class="email"><label>em: </label><a href="mailto:kbeesley.dev@gmail.com">kbeesley.dev@gmail.com</a></span>
+            <span class="phone"><label>ph: </label><a href="tel://1-918-671-0408">918.671.0408</a></span>
+            <span class="address"><label>loc:</label>
+                <span class="group">
+                    <span class="citystatepostal">Lawrence, KS</span>
+                </span>
+            </span>
+        </h2>
+        <aside>
+            <span class="prefix">Web</span>
+            <span class="curl">{</span>
+            <span class="vertigroup">
+                <span class="dev">developer</span>
+                <span class="des">designer</span>
+                <span class="arch">architect</span>
+            </span>
+            <span class="curl">}</span>
+        </aside>
+    </header>
+
+    <div class="contentbody">
+        <div class="main">
+        
+            <section class="PersonalSummary">
+                <h3>Personal Summary</h3>
+                <div class="sectionContent">
+                    Managing family and career to achieve a happy work-life balance.  Wish to enhance the lives of everyone through hard work, humor, caring, and fun all while learning and improving myself.  
+                </div>
+            </section>
+            
+            <section class="Career">
+                <h3>Career Summary</h3>
+                <div class="sectionContent">
+                    <div class="row summary">
+                        <p>Grown from a new CS graduate developing on custom ruggedized handheld computers for propane delivery systems to leading developers and teams creating web application systems for a global non-profit society.  Gained a wide-range of experience from end-user software/hardware support to software system architecture design and implementation.  Trusted and valued as a member of each team in every position.</p>Described by others as:
+                    <br/>
+                    <ul class="col1">
+                    <li>Team player</li>
+                    <li>Creative and Innovative</li>
+                    <li>Inventive</li>
+                    </ul>
+                    <ul class="col2">
+                    <li>Analytical</li>
+                    <li>Divergent thinker</li>
+                    <li>Adept at solving complex problems</li>
+                    </ul>
+                    </div>
+                    <div class="row goals">
+                        <label><strong>Career Goals:</strong> </label><span class="goals">Create and improve software systems through creativity and collaboration to greatly enhance the customer experience.  Improve development systems through online education, project contributions, and community collaboration.</span>
+                    </div>
+                    
+                </div>
+            </section>
+                    
+            <section class="CareerHistory">
+                <h3>Career History</h3>
+                
+                <div class="sectionContent">
+                    <div class="row">
+                        <h4>Society of Exploration Geophysicists <em>feb 2004 - present</em></h4>
+                        <p class="tie-in">SEG is <em>The international society of applied geophysics</em> providing technical magazines, online digital reference library, technical conferences and lectures, publishing, an online store, and various other services to its global 25K+ members since it was founded in 1930.</p>
+                        <p class="item"><span class="itemLead"><strong>Technical Lead</strong></span> <span class="itemContent">
+                            <ul>
+                                <li>Managed the software development of a team of intelligent software developers.</li>
+                                <li>Collaborated with team of managers, BAs, QA, developers and system architect to design and implement development practices in an Agile/SCRUM environment.</li>
+                                <li>Collaborated with BAs, QA, developers and customers to implement new software features and bug fixes in each sprint.</li>
+                                <li>Managed various software projects:
+                                    <ul>
+                                        <li>Conference registration system built on top of CRM (Personify, ASP.NET, SQL Server).</li>
+                                        <li>Technical abstracts submissions system built on top of CRM (Personify, ASP.NET, SQL Server).</li>
+                                        <li>Online membership dues renewal on top of CRM (Personify, ASP.NET, SQL Server)</li>
+                                    </ul>
+                                </li>
+                                <li>Created new libraries and components to facilitate faster and more efficient application development.</li>
+                                <li>Maintained and implemented new continuous integration plans via Atlassian Bamboo.</li>
+                            </ul>
+                            </span>
+                        </p>
+                        <p class="item"><span class="itemLead"><strong>Programmer/Analyst</strong></span><span class="itemContent">
+                                <ul>
+                                    <li>Maintained legacy registration systems implemented in JSP, Java, MS Access</li>
+                                    <li>Created from ground up a new technical abstracts submissions system in Coldfusion and SQL Server. </li>
+                                    <li>Implemented a system migration from a single HTML-based static website to a multi-platform site:
+                                        <ul>
+                                            <li>Liferay portal based on Java and MySQL</li>
+                                            <li>DNN (DotNetNuke) based eCommerce site based on ASP.NET, C#, VB.NET and SQL Server with CRM (Personify) modules</li>
+                                            <li>Wiki implementation using MediaWiki based on PHP and MySQL</li>
+                                            <li>Integrated above sites via CRM-based Single-Sign-On solution</li>
+                                        </ul>
+                                    </li>
+                                    <li>Designed and implemented a new organization site design in HTML/CSS/JS and deployed across all platforms and domains.</li>
+                                </ul>
+                            </span>
+                        </p>
+                        <div class="item technologies">
+                        <span class="itemLead"><strong>Technologies Used</strong></span> <span class="itemContent">
+                            <ul class="col1">
+                                <li>HTML/CSS/JS</li>
+                                <li>.Net (ASP.Net, C#, VB.Net)</li>
+                                <li>Java</li>
+                                <li>SQL Server</li>
+                                <li>Agile/SCRUM</li>
+                                
+                            </ul>
+                            <ul class="col2">
+                                <li>Jira</li>
+                                <li>Confluence</li>
+                                <li>Bamboo</li>
+                                <li>Fisheye</li>
+                            </ul>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>TouchStar Technologies <em>aug 1999 - feb 2004</em></h4>
+                        <p class="tie-in">TouchStar develops software solutions mainly for the energy delivery sector, but also any market where a ruggedized solution is needed.  For the years employed, TouchStar was a global company with software solutions in the United States, Australia, and the U.K.</p>
+                        <p class="item"><span class="itemLead"><strong>Programmer</strong></span><span class="itemContent">
+                            <ul>
+                                <li>Developed propane delivery and invoicing software for ruggedized handheld device based on C++.</li>
+                                <li>Developed software execution scripts based on DOS.</li>
+                                <li>Developed efficient applications on DOS-based device with only 640K of application RAM.</li>
+                                <li>Interfaced with end-users on application and hardware problems on site.</li>
+                                <li>Trained end-users on use of handheld device and application as well as backoffice personnel on integration and downloading of data from device to backend system.</li>
+                            </ul>
+                            </span></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="Education">
+                <h3>Academic History</h3>
+                <div class="sectionContent">
+                    <div class="row">
+                        <p class="item"><span class="itemLead"><strong>University of Tulsa</strong></span><span class="itemContent">Bachelor of Science in Computer Science - <em>1999</em></span></p>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </div>
+        
+    </div>
+    
+    <footer>
+    </footer>
+    
+</body>
+</html>
