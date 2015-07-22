@@ -20,6 +20,7 @@
             display: table;
             clear: both;
         }
+        .printonly { display:none; }
         .group {
             display:inline-block;
             margin:0em;
@@ -195,10 +196,11 @@
 
 
         @media only print {
-            header .contact span.email a {
+            a {
                 text-decoration:none;
                 color:inherit;
             }
+            .printonly { display:initial; }
         }
         @media only screen and (max-width:550px) {
             header {
@@ -372,7 +374,7 @@
                 <h3>Other Projects</h3>
                 <div class="sectionContent">
                     <div class="row">
-                        <p class="item"><span class="itemLead"><strong>Blog: <a href="https://7days7tinyapps.wordpress.com/" target="_blank">7 Days 7 Tiny Apps</a></strong> <span>(<a href="https://github.com/kbeesley-dev/7Days7TinyApps" target="_blank">GitHub</a>)</span></span><span class="itemContent">Created this blog out of finding inspiration to get out of the "business world" development environment and expand into new technologies. Learning something new was difficult because there was so much and easy to get lost.  Tracking my goals and failures at learning new tech and concepts in the hopes that I will help myself and others move faster into inspiration and learning.</span></p>
+                        <p class="item"><span class="itemLead"><strong>Blog: <a href="https://7days7tinyapps.wordpress.com/" target="_blank">7 Days 7 Tiny Apps<span class="printonly">: https://7days7tinyapps.wordpress.com/</span></a></strong> <span>(<a href="https://github.com/kbeesley-dev/7Days7TinyApps" target="_blank">GitHub<span class="printonly">: https://github.com/kbeesley-dev/7Days7TinyApps</span></a>)</span></span><span class="itemContent">Created this blog out of finding inspiration to get out of the "business world" development environment and expand into new technologies. Learning something new was difficult because there was so much and easy to get lost.  Tracking my goals and failures at learning new tech and concepts in the hopes that I will help myself and others move faster into inspiration and learning.</span></p>
                         <div class="item technologies">
                         <span class="itemLead"><strong>Currently Using / Learning</strong></span> <span class="itemContent">
                             <ul class="col1">
@@ -396,10 +398,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <p class="item"><span class="itemLead"><strong>Project: RSVP-app</strong> <span>(<a href="https://github.com/ramygeorgy/rsvp-app" target="_blank">GitHub</a>)</span></span><span class="itemContent">Partnering with a former coworker and friend to rewrite a simple rsvp app for a printing solutions company based in Tulsa. Currently planned technologies to use is the MEAN stack.</span></p>
+                        <p class="item"><span class="itemLead"><strong>Project: RSVP-app</strong> <span>(<a href="https://github.com/ramygeorgy/rsvp-app" target="_blank">GitHub<span class="printonly">: https://github.com/ramygeorgy/rsvp-app</span></a>)</span></span><span class="itemContent">Partnering with a former coworker and friend to rewrite a simple rsvp app for a printing solutions company based in Tulsa. Currently planned technologies to use is the MEAN stack.</span></p>
                     </div>
                     <div class="row">
-                        <p class="item"><span class="itemLead"><strong>Meetup: <a href="http://www.meetup.com/Lawrence-Coders/" target="_blank">Lawrence Coders</a></strong></span><span class="itemContent">Participating in my local coders meetup to not only network and learn new technologies that are prevalent in the Lawrence area but to also work on my skills at mentoring and working in the larger development community.</span></p>
+                        <p class="item"><span class="itemLead"><strong>Meetup: <a href="http://www.meetup.com/Lawrence-Coders/" target="_blank">Lawrence Coders<span class="printonly">: http://www.meetup.com/Lawrence-Coders/</span></a></strong></span><span class="itemContent">Participating in my local coders meetup to not only network and learn new technologies that are prevalent in the Lawrence area but to also work on my skills at mentoring and working in the larger development community.</span></p>
                     </div>
                 </div>
             </section>
