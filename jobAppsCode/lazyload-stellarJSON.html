@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .row:nth-of-type(odd) {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="jumbotron">News</h1>
+
+    <template id="newsItemTemplate">
+        <div class="row">
+            <h3 class="title"></h3>
+            <span class="published"></span>
+        </div>
+    </template>
+    
+    <div id="articleListContainer" class="container-fluid">
+        
+    </div>
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    
+    
+    <script>
+        var currentOffset = 0;
+        var currentLimit = 10;
+        var getMore = true;
+        
+        $(document).ready(function() {
+            addMoreArticleTitles();
+        });
+        
+        $(window).scroll(function() {
+            if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+                addMoreArticleTitles();
+            }
+        });
+        
+        function addMoreArticleTitles()
+        {
+            if(getMore)
+            {
+               console.log('limit: ' + currentLimit + ' ; offset: ' + currentOffset + ' ;'); $.getJSON('http://www.stellarbiotechnologies.com/media/press-releases/json', {limit:currentLimit,offset:currentOffset})
+                .done(function(data) {
+                    console.log(data);
+                    appendNewTitles( data.news );
+                    currentOffset = currentOffset + data.news.length;
+                    if(data.news.length == 0) getMore = false;
+                    else console.log('new offset: ' + currentOffset);
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + ' - ' +  errorThrown);
+                });
+            }
+        }
+        
+        function appendNewTitles( articles )
+        { 
+            console.log(articles);
+            
+            var t = document.querySelector('#newsItemTemplate');
+            var listContainer = document.querySelector('#articleListContainer');    
+            
+            $.each(articles, function(num, article) {
+                
+                var tc = document.importNode(t.content,true);
+                
+                var articleTitle = tc.querySelector('h3');
+                var articlePublish = tc.querySelector('span');
+                
+                articleTitle.textContent = article.title;
+                articlePublish.textContent = article.published;
+                           
+                listContainer.appendChild(tc);
+
+            });
+        }
+        
+    </script>
+</body>
+</html>
